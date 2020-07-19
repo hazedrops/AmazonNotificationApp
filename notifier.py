@@ -36,7 +36,7 @@ def send_email():
     server.starttls()
     server.ehlo()
 
-    server.login('hazedrops1206@gmail.com', 'MY_PASSWORD')
+    server.login('MY_GMAIL_ADDR', 'MY_PASSWORD')
 
     subject = 'The product is back in stock again!'
     body = 'Check the amazon link https://www.amazon.com/gp/product/B07NDF3ZGQ/ref=ox_sc_saved_title_4?smid=A9OB8DNMN7HBF&psc=1'
@@ -44,8 +44,8 @@ def send_email():
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'hazedrops1206@gmail.com',
-        'hazedrops@hotmail.com',
+        'MY_GMAIL_ADDR',
+        'MY_HOTMAIL_ADDR',
         msg
     )
 
